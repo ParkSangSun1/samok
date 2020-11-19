@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else{
             activePlayer =!activePlayer;
         }
-
+        
         if(playerOneScoreCount> playerTwoScoreCount){
             playerStatus.setText("Player One is Winning!");
         }else if(playerTwoScoreCount>playerOneScoreCount){
