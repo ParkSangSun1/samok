@@ -137,6 +137,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         playerTwoScore.setText(Integer.toString(playerTwoScoreCount));
 
     }
+    //다시 하기 눌렀을때
     public void playAgain(){
         rountCount = 0;
         activePlayer = true;
