@@ -28,7 +28,7 @@ class LodingActivity : AppCompatActivity() {
         @Suppress("DEPRECATION")
         Handler().postDelayed(
                 {
-                    startActivity(Intent(this@LodingActivity, MainActivity::class.java))
+                    startActivity(Intent(this@LodingActivity, settingActivity::class.java))
                     finish()
                 },
                 1500

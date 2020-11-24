@@ -19,7 +19,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private int playerOneScoreCount, playerTwoScoreCount, rountCount;
     boolean activePlayer;
 
-            int [] gameState = {2,2,2,2,2,2,2,2,2};
+
+            int count = 0;
+            //x, o 인지 표시시
+           int [] gameState = {2,2,2,2,2,2,2,2,2};
+            //이기는 경우의 수
             int [][] winningPositions ={
                     {0,1,2},{3,4,5},{6,7,8},
                     {0,3,6},{1,4,7},{2,5,8},
@@ -30,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //권한 받아오기
 
         playerOneScore = (TextView) findViewById(R.id.playerOneScore);
         playerTwoScore = (TextView) findViewById(R.id.playerTwoScore);
@@ -51,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    //클릭했을때 x 또는 o를 표시
     @Override
     public void onClick(View v) {
         if(!((Button)v).getText().toString().equals("")){
@@ -61,25 +68,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if(activePlayer){
             ((Button)v).setText("X");
-            ((Button)v).setTextColor(Color.parseColor("#ffffff"));
+            ((Button)v).setTextColor(Color.parseColor("#FC4646"));
             gameState[gameStatePointer]=0;
         }else{
             ((Button)v).setText("O");
-            ((Button)v).setTextColor(Color.parseColor("#ffffff"));
+            ((Button)v).setTextColor(Color.parseColor("#467AFC"));
             gameState[gameStatePointer]=1;
         }
         rountCount++;
 
+
+        //이기는 경우의 수가 되었을시 이긴사람 표시
         if(checkWinner()){
             if (activePlayer) {
                 playerOneScoreCount++;
                 updatePlayerScore();
-                Toast.makeText(this,"Player One Won!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Player One Win!",Toast.LENGTH_SHORT).show();
                 playAgain();
             }else{
                 playerTwoScoreCount++;
                 updatePlayerScore();
-                Toast.makeText(this,"Player Two Won!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Player Two Win!",Toast.LENGTH_SHORT).show();
                 playAgain();
             }
         }else if(rountCount == 9){
@@ -89,7 +98,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else{
             activePlayer =!activePlayer;
         }
-        
+
+        //현재 이기고 있는 사람
         if(playerOneScoreCount> playerTwoScoreCount){
             playerStatus.setText("Player One is Winning!");
         }else if(playerTwoScoreCount>playerOneScoreCount){
@@ -97,6 +107,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else{
             playerStatus.setText("");
         }
+
+        //리셋게임
         resetGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,6 +120,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
      }
+
+     //이겼을때
     public boolean checkWinner(){
         boolean winnerResult = false;
         for(int []winningPosion : winningPositions){
