@@ -21,13 +21,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
             int count = 0;
+            //p1 = 0
+            //p2 = 1
+            // 2
             //x, o 인지 표시시
            int [] gameState = {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2};
             //이기는 경우의 수
             int [][] winningPositions ={
-                    {0,1,2},{1,2,3},{4,5,6},{5,6,7},{8,9,10},{9,10,11},{12,13,14},{13,14,15},
-                    {0,4,8},{4,8,12},{1,5,9},{5,9,13},{2,6,10},{6,10,14},{3,7,11},{7,11,15},
-                    {4,9,14},{0,5,10},{5,10,15},{1,6,11}
+                    {0,1,2},{1,2,3},{4,5,6},{5,6,7},{8,9,10},{9,10,11},{12,13,14},{13,14,15}, //가로
+                    {0,4,8},{4,8,12},{1,5,9},{5,9,13},{2,6,10},{6,10,14},{3,7,11},{7,11,15}, //세로
+                    {4,9,14},{0,5,10},{5,10,15},{1,6,11} //대각선
             };
 
     @Override
@@ -91,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(this,"Player Two Win!",Toast.LENGTH_SHORT).show();
                 playAgain();
             }
-        }else if(rountCount == 9){
+        }else if(rountCount == 16){
             playAgain();
             Toast.makeText(this,"No Winner!", Toast.LENGTH_SHORT).show();
 
@@ -122,16 +125,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      }
 
      //이겼을때
-    public boolean checkWinner(){
-        boolean winnerResult = false;
-        for(int []winningPosion : winningPositions){
-            if(gameState[winningPosion[0]]==gameState[winningPosion[1]] &&
-                    gameState[winningPosion[1]]==gameState[winningPosion[2]] && gameState[winningPosion[0]] != 2){
-                winnerResult = true;
-            }
-        }
-        return winnerResult;
-    }
+     public boolean checkWinner(){
+         boolean winnerResult = false;
+         for(int []winningPosion : winningPositions){
+             if(gameState[winningPosion[0]]==gameState[winningPosion[1]] &&
+                     gameState[winningPosion[1]]==gameState[winningPosion[2]] && gameState[winningPosion[0]] != 2){
+                 winnerResult = true;
+             }
+         }
+         return winnerResult;
+     }
+
     public void updatePlayerScore(){
         playerOneScore.setText(Integer.toString(playerOneScoreCount));
         playerTwoScore.setText(Integer.toString(playerTwoScoreCount));
