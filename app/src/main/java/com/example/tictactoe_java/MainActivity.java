@@ -63,13 +63,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //클릭했을때 x 또는 o를 표시
     @Override
     public void onClick(View v) {
+
         if(!((Button)v).getText().toString().equals("")){
             return;
         }
+
         String buttonID = v.getResources().getResourceEntryName(v.getId()); //btn_2
-        int gameStatePointer = Integer.parseInt(buttonID.substring(buttonID.length()-1, buttonID.length()));
+        int gameStatePointer = Integer.parseInt(buttonID.replace("btn_",""));
+        System.out.println(gameStatePointer);
+        System.out.println("버튼아이디 :"+buttonID);
 
         if(activePlayer){
+
             ((Button)v).setText("X");
             ((Button)v).setTextColor(Color.parseColor("#FC4646"));
             gameState[gameStatePointer]=0;
@@ -127,12 +132,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      //이겼을때
      public boolean checkWinner(){
          boolean winnerResult = false;
+         //  : 이긴 경우수
          for(int []winningPosion : winningPositions){
              if(gameState[winningPosion[0]]==gameState[winningPosion[1]] &&
                      gameState[winningPosion[1]]==gameState[winningPosion[2]] && gameState[winningPosion[0]] != 2){
                  winnerResult = true;
              }
          }
+         if(winnerResult) System.out.println("DEBUUUUG");
          return winnerResult;
      }
 
