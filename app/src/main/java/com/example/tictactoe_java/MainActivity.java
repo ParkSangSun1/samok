@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private TextView playerOneScore, playerTwoScore, playerStatus;
-    private Button [] buttons = new Button[16];
+    private Button [] buttons = new Button[100];
     private Button resetGame;
 
     private int playerOneScoreCount, playerTwoScoreCount, rountCount;
@@ -25,10 +25,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //p2 = 1
             // 2
             //x, o 인지 표시시
-           int [] gameState = {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2};
+           int [] gameState = {2,2,2,2,2,2,2,2,2,2,
+                    2,2,2,2,2,2,2,2,2,2,
+                    2,2,2,2,2,2,2,2,2,2,
+                    2,2,2,2,2,2,2,2,2,2,
+                    2,2,2,2,2,2,2,2,2,2,
+                    2,2,2,2,2,2,2,2,2,2,
+                    2,2,2,2,2,2,2,2,2,2,
+                    2,2,2,2,2,2,2,2,2,2,
+                    2,2,2,2,2,2,2,2,2,2,
+                    2,2,2,2,2,2,2,2,2,2,};
             //이기는 경우의 수
             int [][] winningPositions ={
-                    {0,1,2},{1,2,3},{4,5,6},{5,6,7},{8,9,10},{9,10,11},{12,13,14},{13,14,15}, //가로
+                    {0,1,2,3},{1,2,3,4},{2,3,4,5},{3,4,5,6},{4,5,6,7},{5,6,7,8},{6,7,8,9},  {10,11,12,13},{11,12,13,14},{12,13,14,15},{13,14,15,16},{14,15,16,17},{15,16,17,18},{16,17,18,19}, {20,21,22,23},{21,22,23,24},{22,23,24,25},{23,24,25,26},{24,25,26,27},{25,26,27,28},{26,27,28,29},//가로
+
+
+
+
                     {0,4,8},{4,8,12},{1,5,9},{5,9,13},{2,6,10},{6,10,14},{3,7,11},{7,11,15}, //세로
                     {1,6,11},{0,5,10},{5,10,15},{4,9,14},{2,5,8},{3,6,9},{6,9,12},{7,10,13}//대각선
             };
