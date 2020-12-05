@@ -32,7 +32,7 @@
              android:fontFamily="@font/jalnan"
              android:text="박상선"
              android:textColor="#ffffff"
-             android:textSize="20sp" />
+             android:textSize="30sp" />
 
          <TextView
              android:id="@+id/playerOneScore"
@@ -60,7 +60,7 @@
              android:fontFamily="@font/jalnan"
              android:textColor="#ffffff"
              android:text="박상선"
-             android:textSize="20sp" />
+             android:textSize="30sp" />
          <TextView
              android:id="@+id/playerTwoScore"
              android:layout_width="wrap_content"
@@ -75,6 +75,21 @@
 
    </LinearLayout>
 
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+      android:gravity="center"
+       android:layout_marginTop="15dp"
+       >
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+         android:text="설정점수"
+         android:textSize="20sp"
+          android:fontFamily="@font/jalnan"
+          android:textColor="#ffffff"
+         />
+   </LinearLayout>
 
    <LinearLayout
        android:layout_width="match_parent"
@@ -85,8 +100,10 @@
           android:id="@+id/user_settingscore"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="설정 스코어"
-          android:textColor="@color/black"
+          android:text="10"
+          android:fontFamily="@font/jalnan"
+          android:textSize="20sp"
+          android:textColor="#ffffff"
           android:layout_gravity="left"
           />
    </LinearLayout>
@@ -102,11 +119,11 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:id="@+id/playerStatus"
-          android:layout_marginTop="10dp"
-          android:fontFamily="@font/baloo"
+          android:layout_marginTop="15dp"
+          android:fontFamily="@font/jalnan"
           android:textAlignment="center"
-          android:textColor="@color/black"
-          android:textSize="20sp"/>
+          android:textColor="#ffffff"
+          android:textSize="15sp"/>
    </LinearLayout>
 
 
