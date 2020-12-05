@@ -30,7 +30,7 @@
                 />
 
             <EditText
-                android:id="@+id/player1"
+                android:id="@+id/player_name1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="플레이어1 이름"
@@ -50,7 +50,7 @@
                 android:src="@drawable/dragons_15"
                 />
             <EditText
-                android:id="@+id/player2"
+                android:id="@+id/player_name2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="플레이어2 이름"
@@ -75,12 +75,13 @@
             android:text="점수설정"
             android:textSize="30dp"
             />
+
         <EditText
+            android:id="@+id/settingscore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="점수를 입력하시오"
             android:gravity="center"
-            />
+            android:hint="점수를 입력하시오" />
     </LinearLayout>
     <ImageView
         android:id="@+id/go_main"

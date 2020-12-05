@@ -25,18 +25,25 @@ public class settingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                EditText player_name1 = (EditText) findViewById(R.id.player_name1);
+                EditText player_name2 = (EditText) findViewById(R.id.player_name2);
+                EditText settingscore = (EditText) findViewById(R.id.settingscore);
+
+                String name1 = player_name1.getText().toString();
+                String name2 = player_name2.getText().toString();
+                String settingscore1 = settingscore.getText().toString();
+
                 Intent intent= new Intent(settingActivity.this, MainActivity.class);
+                intent.putExtra("입력한 이름1",name1);
+                intent.putExtra("입력한 이름2",name2);
+                intent.putExtra("설정 스코어",settingscore1);
+
                 startActivity(intent);
             }
         });
-        /*
-        ImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(myIntent);
-            }
-        });
-        */
+
 
     }
+
+
 }
