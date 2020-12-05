@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int settingscore=0;
     String newwin1, newwin2;
 
+
     private int playerOneScoreCount, playerTwoScoreCount, rountCount;
     boolean activePlayer;
 
@@ -67,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         player_two.setText(String.valueOf(name2));
         newwin2=name2;
         usersettingscore.setText(String.valueOf(usersetting));
+        settingscore=Integer.parseInt(usersetting);
 
 
         resetGame =(Button) findViewById(R.id.resetGame);
@@ -141,6 +143,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else{
             playerStatus.setText("");
         }
+
+        if(playerOneScoreCount==settingscore){
+            playerStatus.setText(newwin1+" 플레이어가 최종 우승했습니다");
+        }
+        else if(playerTwoScoreCount==settingscore){
+            playerStatus.setText(newwin2+" 플레이어가 최종 우승했습니다");
+        }
+
 
         //리셋게임
         resetGame.setOnClickListener(new View.OnClickListener() {
