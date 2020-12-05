@@ -5,89 +5,120 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/mainbackground"
     tools:context=".settingActivity">
 
-
-    <LinearLayout
+    <TextView
+        android:layout_marginTop="70sp"
+        android:textSize="40sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/jalnan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:text="환경설정"
         android:gravity="center"
-        android:layout_marginTop="60dp"
-        >
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginRight="60dp"
-            >
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/dragons_14"
-                />
-
-            <EditText
-                android:id="@+id/player_name1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="플레이어1 이름"
-                android:gravity="center"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            >
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/dragons_15"
-                />
-            <EditText
-                android:id="@+id/player_name2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="플레이어2 이름"
-                android:gravity="center"
-                />
-        </LinearLayout>
-
-    </LinearLayout>
-
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
+        android:layout_marginTop="80dp"
         >
 
-        <TextView
-            android:layout_marginTop="80dp"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="점수설정"
-            android:textSize="30dp"
-            />
-
-        <EditText
-            android:id="@+id/settingscore"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:gravity="center"
-            android:hint="점수를 입력하시오" />
+            android:background="@drawable/setting_box"
+            android:padding="20sp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Player1"
+                android:fontFamily="@font/jalnan"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:layout_marginRight="30dp"
+                />
+            <EditText
+                android:id="@+id/player_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="이름설정"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/setting_box"
+            android:gravity="center"
+            android:padding="20sp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Player2"
+                android:fontFamily="@font/jalnan"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:layout_marginRight="30dp"
+                />
+            <EditText
+                android:id="@+id/player_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="이름설정"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/setting_box"
+            android:gravity="center"
+            android:padding="20sp"
+            android:layout_marginTop="10sp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="점수설정"
+                android:textColor="#000000"
+                android:fontFamily="@font/jalnan"
+                android:textSize="20sp"
+                android:layout_marginRight="30dp"
+                />
+            <EditText
+                android:id="@+id/settingscore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="점수설정" />
+        </LinearLayout>
     </LinearLayout>
-    <ImageView
+
+    <Button
+        android:background="@drawable/resetgame_btn"
         android:id="@+id/go_main"
         android:layout_gravity="center"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="110dp"
+        android:text="게임시작"
+        android:textSize="18sp"
+        android:fontFamily="@font/jalnan"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+
+
         android:src="@drawable/play_button" />
 </LinearLayout>

@@ -32,7 +32,7 @@
              android:fontFamily="@font/jalnan"
              android:text="박상선"
              android:textColor="#ffffff"
-             android:textSize="30sp" />
+             android:textSize="28sp" />
 
          <TextView
              android:id="@+id/playerOneScore"
@@ -42,7 +42,7 @@
              android:textColor="#ffffff"
              android:text="0"
 
-             android:textSize="25sp"
+             android:textSize="23sp"
             />
       </LinearLayout>
 
@@ -60,7 +60,7 @@
              android:fontFamily="@font/jalnan"
              android:textColor="#ffffff"
              android:text="박상선"
-             android:textSize="30sp" />
+             android:textSize="28sp" />
          <TextView
              android:id="@+id/playerTwoScore"
              android:layout_width="wrap_content"
@@ -69,7 +69,7 @@
              android:textColor="#ffffff"
              android:text="0"
 
-             android:textSize="25sp"
+             android:textSize="23sp"
              />
       </LinearLayout>
 
@@ -130,7 +130,7 @@
    <!--게임판-->
    <LinearLayout
        android:gravity="center"
-       android:layout_marginTop="30dp"
+       android:layout_marginTop="25dp"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
       android:orientation="vertical"
@@ -1019,10 +1019,10 @@
        android:background="@drawable/resetgame_btn"
        android:fontFamily="@font/knewave"
        android:text="Reset Game"
-       android:textColor="#ffffff"
+       android:textColor="#F8F8F8"
        android:textSize="20sp"
        android:textStyle="bold"
-       android:layout_marginLeft="40dp"
-       android:layout_marginRight="40dp"
+       android:layout_marginLeft="60dp"
+       android:layout_marginRight="60dp"
        />
 </LinearLayout>
