@@ -40,7 +40,13 @@ public class settingActivity extends AppCompatActivity {
                 String settingscore1 = settingscore.getText().toString();
 
 
-                if (settingscore.getText().toString().equals("")) {
+                if (player_name1.getText().toString().equals("")) {
+                    Toast.makeText(getApplicationContext(),"Player1 이름을 설정하세요!",Toast.LENGTH_SHORT).show();
+                }
+                else if (player_name2.getText().toString().equals("")) {
+                    Toast.makeText(getApplicationContext(),"Player2 이름을 설정하세요!",Toast.LENGTH_SHORT).show();
+                }
+                else if (settingscore.getText().toString().equals("")) {
                     Toast.makeText(getApplicationContext(),"점수를 설정하세요!",Toast.LENGTH_SHORT).show();
                 }
                 else {
