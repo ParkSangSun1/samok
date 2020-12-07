@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 public class settingActivity extends AppCompatActivity {
@@ -23,7 +22,7 @@ public class settingActivity extends AppCompatActivity {
 
 
 
-        go_main = findViewById(R.id.go_main);
+        go_main = findViewById(R.id.go_main1);
 
         go_main.setOnClickListener(new View.OnClickListener() {
             @Override

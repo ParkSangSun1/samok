@@ -110,7 +110,7 @@
 
     <Button
         android:background="@drawable/resetgame_btn"
-        android:id="@+id/go_main"
+        android:id="@+id/go_main1"
         android:layout_gravity="center"
         android:text="게임시작"
         android:textSize="18sp"
