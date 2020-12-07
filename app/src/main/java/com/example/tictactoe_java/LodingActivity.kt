@@ -31,11 +31,9 @@ class LodingActivity : AppCompatActivity() {
                     startActivity(Intent(this@LodingActivity, settingActivity::class.java))
                     finish()
                 },
-                1500
+                2500
         )
 
 
-        //val typeface: Typeface = Typeface.createFromAsset(assets, "godoroundedd.ttf")
-        //tv_app_name.typeface = typeface
     }
 }

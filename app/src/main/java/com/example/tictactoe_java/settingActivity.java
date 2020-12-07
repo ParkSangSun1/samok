@@ -48,6 +48,7 @@ public class settingActivity extends AppCompatActivity {
                 }
                 else if (settingscore.getText().toString().equals("")) {
                     Toast.makeText(getApplicationContext(),"점수를 설정하세요!",Toast.LENGTH_SHORT).show();
+
                 }
                 else {
                     Intent intent = new Intent(settingActivity.this, MainActivity.class);
