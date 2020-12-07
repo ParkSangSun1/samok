@@ -81,6 +81,7 @@
                         android:textSize="10sp"
                         />
                     <TextView
+                        android:id="@+id/player2vs"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="~~~"
@@ -159,6 +160,7 @@
                         android:textSize="10sp"
                         />
                     <TextView
+                        android:id="@+id/player1vs"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="~~~"
@@ -253,7 +255,7 @@
             </LinearLayout>
 
             <Button
-
+                android:id="@+id/settingscore_btn"
                 android:layout_marginTop="17dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -329,9 +331,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
-                android:text="10X10 크기의 경기 팜에서 이루어지는 박진감 넘치는 한판 승부입니다. 서로 번가라 가며
-돌을 놓고 먼저 가로 또는 세로 또는 대각선으로 4개의 선을 긋는 사람이 승리하는 게임입니다."
-                android:textSize="12dp"
+                android:text="10X10 크기의 경기 판에서 이루어지는 박진감 넘치는 보드게임 승부입니다. 서로 1턴에 1개씩 번가라 가며
+돌을 놓고 먼저 가로 또는 세로 또는 대각선으로 4개의 선을 긋는 사람이 승리하는 게임입니다. "
+                android:textSize="14dp"
                 android:fontFamily="@font/spoqaregular"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"

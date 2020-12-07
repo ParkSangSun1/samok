@@ -12,8 +12,8 @@ import android.widget.Toast;
 public class settingActivity extends AppCompatActivity {
 
     private Button go_main;
-    EditText player1;
-    EditText player2;
+//    EditText player1;
+//    EditText player2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

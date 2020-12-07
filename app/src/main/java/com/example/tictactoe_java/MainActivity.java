@@ -59,16 +59,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TextView usersettingscore = (TextView) findViewById(R.id.user_settingscore);
 
         Intent intent = getIntent();
-        String name1 = intent.getStringExtra("입력한 이름1");
-        String name2 = intent.getStringExtra("입력한 이름2");
-        String usersetting = intent.getStringExtra("설정 스코어");
+        String player1 = intent.getStringExtra("입력한 이름1");
+        String player2 = intent.getStringExtra("입력한 이름2");
+        String settingscore_btn = intent.getStringExtra("설정 스코어");
 
-        player_one.setText(String.valueOf(name1));
-        newwin1=name1;
-        player_two.setText(String.valueOf(name2));
-        newwin2=name2;
-        usersettingscore.setText(String.valueOf(usersetting));
-        settingscore=Integer.parseInt(usersetting);
+        player_one.setText(String.valueOf(player1));
+        newwin1=player1;
+        player_two.setText(String.valueOf(player2));
+        newwin2=player2;
+        usersettingscore.setText(String.valueOf(settingscore_btn));
+        settingscore=Integer.parseInt(settingscore_btn);
 
 
         resetGame =(Button) findViewById(R.id.resetGame);
