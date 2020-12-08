@@ -102,8 +102,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if(activePlayer){
 
-            ((Button)v).setText("X");
-            ((Button)v).setTextColor(Color.parseColor("#ffffff"));
+            ((Button)v).setText("O");
+            ((Button)v).setTextColor(Color.parseColor("#000000"));
             gameState[gameStatePointer]=0;
         }else{
             ((Button)v).setText("O");
