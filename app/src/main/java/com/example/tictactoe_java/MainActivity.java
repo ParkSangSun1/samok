@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private int playerOneScoreCount, playerTwoScoreCount, rountCount;
     boolean activePlayer;
+    Button go_back;
 
 
             int count = 0;
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         playerOneScore = (TextView) findViewById(R.id.playerOneScore);
         playerTwoScore = (TextView) findViewById(R.id.playerTwoScore);
         playerStatus = (TextView) findViewById(R.id.playerStatus);
+        go_back = (Button)findViewById(R.id.go_back);
 
 
         TextView player_one = (TextView) findViewById(R.id.playerOne);
@@ -84,6 +86,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         playerOneScoreCount=0;
         playerTwoScoreCount=0;
         activePlayer=true;
+
+        go_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, new_setting.class);
+
+                startActivity(intent);
+                overridePendingTransition(R.anim.fadenin, R.anim.fadeout);
+
+            }
+        });
 
     }
 
@@ -197,4 +210,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             buttons[i].setText("");
         }
     }
+
 }

@@ -10,6 +10,10 @@
     >
 
    <!--플레이어 점수와 이름 표시-->
+
+
+
+
    <LinearLayout
        android:layout_marginTop="45dp"
        android:layout_width="match_parent"
@@ -109,6 +113,7 @@
    </LinearLayout>
 
 
+
    <!--현재 이기고 있는팀 표시-->
    <LinearLayout
        android:layout_width="match_parent"
@@ -125,14 +130,29 @@
           android:textColor="#000000"
           android:textSize="15sp"/>
    </LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="25dp"
+       android:gravity="right"
+      >
 
+      <Button
+          android:id="@+id/go_back"
+          android:layout_marginRight="35dp"
+          android:layout_width="50dp"
+          android:layout_height="20dp"
+         android:background="@drawable/simplebtn"
+         android:text="나가기"/>
+
+   </LinearLayout>
 
    <!--게임판-->
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
       android:gravity="center"
-       android:layout_marginTop="25dp"
+       android:layout_marginTop="10dp"
       >
       <LinearLayout
           android:gravity="center"

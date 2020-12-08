@@ -90,6 +90,7 @@ public class new_setting extends AppCompatActivity {
                     intent.putExtra("설정 스코어", settingscore1);
 
                     startActivity(intent);
+                    overridePendingTransition(R.anim.fadenin, R.anim.fadeout);
                 }
             }
         });
